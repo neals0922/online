@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Main Header is kept -->
+
+    <div class="order-form">
+        <div class="order-item">
+            <label for="fruits">Fruits:</label>
+            <select id="fruits">
+                <option value="apple">apple</option>
+                <option value="banana">banana</option>
+                <option value="cherry">cherry</option>
+                <option value="grapes">grapes</option>
+                <option value="orange">orange</option>
+                <option value="peach">peach</option>
+            </select>
+            <input type="number" max="999" placeholder="Qty">
+        </div>
+
+        <div class="order-item">
+            <label for="vegetables">Vegetables:</label>
+            <select id="vegetables">
+                <option value="bell-pepper">bell pepper</option>
+                <option value="carrot">carrot</option>
+                <option value="corn">corn</option>
+                <option value="jalapeno">jalapeno</option>
+                <option value="mushroom">mushroom</option>
+                <option value="tomato">tomato</option>
+            </select>
+            <input type="number" max="999" placeholder="Qty">
+        </div>
+
+        <div class="order-item">
+            <label for="others">Others:</label>
+            <select id="others">
+                <option value="egg">egg</option>
+                <option value="bread">bread</option>
+                <option value="cheese">cheese</option>
+                <option value="pie">pie</option>
+                <option value="pizza">pizza</option>
+                <option value="hamburger">hamburger</option>
+            </select>
+            <input type="number" max="999" placeholder="Qty">
+        </div>
+
+        <div class="order-buttons">
+            <button onclick="orderNow()">Order Now</button>
+            <button onclick="cancelOrder()">Cancel</button>
+        </div>
+    </div>
+
+    <script>
+        function orderNow() {
+            alert("Thank you for your business!");
+        }
+
+        function cancelOrder() {
+            alert("Order canceled.");
+        }
+    </script>
+</body>
+</html>

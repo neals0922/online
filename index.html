@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Obsession With Victory</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Obsession With Victory</h1>
+    </header>
+
+    <!-- Menu Container -->
+    <div class="menu-container">
+        <div class="menu-button" onclick="toggleMenu()">MENU</div>
+        
+        <!-- Menu Links -->
+        <nav class="menu-links">
+            <button onclick="homeClick()">HOME</button>
+            <button onclick="loadPage('fruits.html')">FRUITS</button>
+            <button onclick="loadPage('vegetables.html')">VEGETABLES</button>
+            <button onclick="loadPage('others.html')">OTHERS</button>
+            <button onclick="loadPage('order.html')">ORDERS</button>
+        </nav>
+    </div>
+
+    <!-- Content iframe with a descriptive title attribute -->
+    <iframe id="contentFrame" src="home.html" title="Content Frame for displaying pages like Fruits, Vegetables, Others, and Orders"></iframe>
+
+    <script>
+        function loadPage(page) {
+            document.getElementById("contentFrame").src = page;
+        }
+
+        function toggleMenu() {
+            const menuButton = document.querySelector('.menu-button');
+            const menuLinks = document.querySelector('.menu-links');
+            menuButton.classList.toggle('hidden'); // Toggle visibility of the menu button
+            menuLinks.classList.toggle('visible'); // Toggle visibility of the menu links
+        }
+
+        function homeClick() {
+            loadPage('home.html'); // Load the "HOME" page
+            toggleMenu(); // Collapse the menu back to the "MENU" button
+        }
+    </script>
+</body>
+</html>
